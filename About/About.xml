@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+
+    <name>my weapon mod[B18]</name>
+
+    <author></author>
+
+    <url>None</url>
+
+    <targetVersion>0.18.1722</targetVersion>
+
+    <description>
+		my weapon mod
+	</description>
+
+</ModMetaData>

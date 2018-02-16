@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <!-- ============================================================== -->
+
+ <!-- ============================================================== -->
+<ThingDef ParentName="BaseBullet">
+    <defName>ABC_Bullet_mygun</defName>
+    <label>this is the name of the bullet in the game</label>
+    <graphicData>
+      <texPath>nameThis/Projectile/Bullet_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>20</damageAmountBase>
+      <speed>35</speed>
+    </projectile>
+	
+  </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>ABC_Gun_mygun</defName>
+    <label>this is the name of the gun in the game</label>
+    <description>A magazine-fed fully automatic shotgun. Short range and very low accuracy, but extraordinarily dangerous due to burst fire.</description>
+    <graphicData>
+      <texPath>nameThis/gun/test</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <soundInteract>InteractShotgun</soundInteract>
+		<generateCommonality>0.3</generateCommonality>
+    <recipeMaker>
+      <researchPrerequisite>GasOperation</researchPrerequisite>
+    </recipeMaker>
+    <statBases>
+      <WorkToMake>30000</WorkToMake>
+      <Mass>3.5</Mass>
+      <AccuracyTouch>0.70</AccuracyTouch>
+      <AccuracyShort>0.83</AccuracyShort>
+      <AccuracyMedium>0.58</AccuracyMedium>
+      <AccuracyLong>0.32</AccuracyLong>
+      <RangedWeapon_Cooldown>1.00</RangedWeapon_Cooldown>
+      <Weapon_Bulk>1.0</Weapon_Bulk>
+    </statBases>
+    <costList>
+      <Steel>70</Steel>
+      <Component>5</Component>
+    </costList>
+    <verbs>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <isPrimary>true</isPrimary>
+		<hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>ABC_Bullet_mygun</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>26</range>
+        <burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>7</ticksBetweenBurstShots>
+        <soundCast>ABC_Shot_mygun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>10</muzzleFlashScale>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>stock</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+      </li>
+      <li>
+        <label>barrel</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.9</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+
+  <!-- ============================================== -->
+
+  
+</Defs>
